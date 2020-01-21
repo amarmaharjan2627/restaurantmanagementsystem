@@ -5,7 +5,7 @@
 @push('css')
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
 
-@endpush
+@endpush 
 
 @section('content')
 	<div class="content">
@@ -37,7 +37,7 @@
                       		<td>{{ $key + 1 }}</td>
                       		<td>{{ $slider->title }}</td>
                       		<td>{{ $slider->sub_title }}</td>
-                      		<td>{{ $slider->image }}</td>
+                      		<td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/slider/'.$slider->image) }}" style="height: 100px; width: 100px" alt=""></td>
                       		<td>{{ $slider->created_at }}</td>
                       		<td>{{ $slider->updated_at }}</td>
                       		<td><a href="{{ route('slider.edit', $slider->id) }}" class="btn btn-info btn-sm"><i class="material-icons">mode_edit</i></a>
